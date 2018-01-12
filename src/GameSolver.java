@@ -8,10 +8,22 @@ public class GameSolver {
  * @return solution
  */
 	public int play(NumberGame game) {
-		for (int i = 0;; i++) {
-			if (game.guess(i))
-				return i;
-		}
-	}
-
+		int max = game.getUpperBound();
+		int min = 0;
+		int ans; boolean nigger = false;
+		do {
+			ans = (max + min)/2;
+			nigger = game.guess(ans);
+			if (game.getMessage().contains("small")) {
+				min = ans;
+			} else if (game.getMessage().contains("large")) {
+				max = ans;
+			}
+			
+	} while (!nigger);
+		return ans;
+	
+	
+}
+	
 }
