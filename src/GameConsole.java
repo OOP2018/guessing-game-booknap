@@ -9,7 +9,6 @@ public class GameConsole {
 	public int play(NumberGame game) {
 		Scanner console = new Scanner(System.in);
 
-		// describe the game
 		System.out.println(game.toString());
 		int guess = 0;
 		while (true) {

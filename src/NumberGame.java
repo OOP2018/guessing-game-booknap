@@ -12,7 +12,6 @@ public class NumberGame {
 
     /** Initialize a new default game. */
     public NumberGame() {
-		// initialize your game.
     	message = "";
     }
    
@@ -22,7 +21,6 @@ public class NumberGame {
      * @return true if correct, false otherwise
      */
     public boolean guess(int answer) {
-		// TODO your subclass should override this method
 		message = "Sorry, that's not correct";
 		return false;
     }

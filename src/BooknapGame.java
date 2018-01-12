@@ -1,5 +1,10 @@
 import java.util.Random;
-
+/**
+ * Guessing game.
+ * 
+ * @author Napasai Sutthichutipong
+ * @version 2018.01.12
+ */
 public class BooknapGame extends NumberGame {
 
 	private int upperBound;
@@ -11,9 +16,6 @@ public class BooknapGame extends NumberGame {
 		this.upperBound = upperbound;
 		long seed = System.nanoTime();
 		Random rand = new Random(seed);
-		// don't just copy this.
-		// random.nextInt(n) returns a random integer between 0 and n-1,
-		// inclusive.
 		this.secret = rand.nextInt(Math.max(upperbound - 10, 1)) + 10;
 		super.setMessage("What is the decimal value of 0x" + Integer.toString(secret, base) + " (hexadecimal)?");
 	}
