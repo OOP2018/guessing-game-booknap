@@ -9,7 +9,7 @@ public class Main {
 		NumberGame game = new BooknapGame(upperBound);
 		GameConsole ui = new GameConsole( );
 		int solution = ui.play( game );
-		System.out.println("play() returned "+solution);
-		System.out.println("You guessed "+game.getCount()+" times");
+		System.out.println("correct! the answer is "+solution);
+		System.out.println("You guessed "+game.getCount()+" times.");
 	}
 }
