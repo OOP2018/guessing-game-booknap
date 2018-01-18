@@ -12,17 +12,17 @@ public class BooknapGame extends NumberGame {
 	private int count;
 
 	public BooknapGame(int upperbound) {
-		final int base = 16;
 		this.upperBound = upperbound;
 		long seed = System.nanoTime();
 		Random rand = new Random(seed);
-		this.secret = rand.nextInt(Math.max(upperbound - 10, 1)) + 10;
-		super.setMessage("What is the decimal value of 0x" + Integer.toString(secret, base) + " (hexadecimal)?");
+		this.secret = rand.nextInt(upperbound);
 	}
 
 	public boolean guess(int number) {
-		if (number == secret)
+		if (number == secret){
+			count++;
 			return true;
+		}
 		else if (number < secret) {
 			setMessage("Your number is too small.");
 			count++;
@@ -39,7 +39,7 @@ public class BooknapGame extends NumberGame {
 	}
 	
 	public String toString(){
-		return "Convert a number from hexadecimal to decimal.";
+		return "Guess number between 0 to 100";
 	}
 	
 	public int getCount(){

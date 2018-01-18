@@ -13,6 +13,6 @@ public class Main {
 		int solution = ui.play( game );
 		System.out.println("correct! the answer is "+solution);
 		System.out.println("You guessed "+game.getCount()+" times.");
-		System.out.println(solver.play(game));
+		System.out.println("Game solver "+solver.play(game));
 		}
 }
