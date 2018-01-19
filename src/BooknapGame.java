@@ -44,14 +44,23 @@ public class BooknapGame extends NumberGame {
 		return false;
 	}
 	
+	/**
+     * Get upperbound of the game.
+     * @return upperbound of the game.
+     */
 	public int getUpperBound(){
 		return upperBound;
 	}
 	
+	@Override
 	public String toString(){
-		return "Guess number between 0 to 100";
+		return String.format("Guess number between 0 to %d", upperBound);
 	}
 	
+	/**
+     * Get number of guesses.
+     * @return number of guesses.
+     */
 	public int getCount(){
 		return count;
 	}
