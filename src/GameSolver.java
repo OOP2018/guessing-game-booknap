@@ -1,11 +1,12 @@
 /**
  * Automatically solve secret number to any numberGame.
+ * @author Napasai Sutthichutipong
  */
 public class GameSolver {
 	/**
 	 * Play a number and return the solution.
-	 * @param game
-	 * @return solution
+	 * @param NumberGame to solve.
+	 * @return solution of game.
 	 */
 	public int play(NumberGame game) {
 		int max = game.getUpperBound();

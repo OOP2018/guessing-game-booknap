@@ -61,6 +61,10 @@ public class NumberGame {
 		return "You should override this method for your game";
     }
 	
+	/**
+	 * Get number of guesses and return them.
+	 * @return the number of guesses.
+	 */
 	public int getCount(){
 		return 0;
 	}

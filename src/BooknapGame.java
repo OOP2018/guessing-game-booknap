@@ -1,7 +1,7 @@
 import java.util.Random;
 /**
- * Guessing game.
- * 
+ * Player guess number from 0 to 100.
+ * When player guess correct number, program will tell you how many time you guessed.
  * @author Napasai Sutthichutipong
  * @version 2018.01.12
  */
@@ -11,6 +11,10 @@ public class BooknapGame extends NumberGame {
 	private int secret;
 	private int count;
 
+	/**
+	 * set the secret number.
+	 * @param upperbound
+	 */
 	public BooknapGame(int upperbound) {
 		this.upperBound = upperbound;
 		long seed = System.nanoTime();
@@ -18,6 +22,12 @@ public class BooknapGame extends NumberGame {
 		this.secret = rand.nextInt(upperbound);
 	}
 
+	/**
+	 * If your guess number is bigger than secret number, program will tell you "Your number is too large".
+     * If your guess number is smaller than secret number, program will tell you "Your number is too small".
+	 * @param number that you guessed.
+	 * @return true when you guessed correct number, false otherwise.
+	 */
 	public boolean guess(int number) {
 		if (number == secret){
 			count++;
